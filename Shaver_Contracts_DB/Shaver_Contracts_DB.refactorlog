@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="f769d652-5970-4ae8-9f05-a8bbb2c165e6" ChangeDateTime="11/09/2014 23:58:50">
+    <Property Name="ElementName" Value="[dbo].[Estimated_Tax_payments].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Estimated_Tax_payments]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="KY_Estimated_Taxes" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="30684b14-1a05-4f90-b0d8-4c0e9b7517af" ChangeDateTime="11/10/2014 00:00:28">
+    <Property Name="ElementName" Value="[dbo].[Estimated_Tax_payments].[Tax]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Estimated_Tax_payments]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Tax_Year" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="11eea6bd-7299-40bd-b69e-855dacf3dc82" ChangeDateTime="11/10/2014 00:38:35">
+    <Property Name="ElementName" Value="[dbo].[Estimated_Tax_payments].[Quarter_Est_Tax]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Estimated_Tax_payments]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="KY_Quarter_LU" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="11c04280-2135-49e8-b137-ff1efdad395a" ChangeDateTime="11/10/2014 00:46:16">
+    <Property Name="ElementName" Value="[dbo].[Quarter_LU].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Quarter_LU]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="KY_Quarter_LU" />
+  </Operation>
+</Operations>

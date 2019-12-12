@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>Shaver_Contracts_DB</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{309cb9cf-537b-49cf-bdba-99d646542e07}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql110DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>Shaver_Contracts_DB</RootNamespace>
+    <AssemblyName>Shaver_Contracts_DB</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <!-- VS10 without SP1 will not have VisualStudioVersion set, so do that here -->
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <!-- Default to the v10.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="Scripts" />
+    <Folder Include="Scripts\Post-Deploy" />
+    <Folder Include="Profiles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\Contractee.sql" />
+    <Build Include="dbo\Tables\Expenses.sql" />
+    <Build Include="dbo\Tables\Version.sql" />
+    <Build Include="dbo\Tables\Contract_Rate_Freq_LU.sql" />
+    <Build Include="dbo\Tables\Contracts_Rate.sql" />
+    <Build Include="dbo\Tables\Tasks.sql" />
+    <Build Include="dbo\Tables\Invoice_Header.sql" />
+    <Build Include="dbo\Tables\Report_Types.sql" />
+    <Build Include="dbo\Tables\Contract_Status_LU.sql" />
+    <Build Include="dbo\Tables\Reports.sql" />
+    <Build Include="dbo\Tables\Deliverable_Status_Lu.sql" />
+    <Build Include="dbo\Tables\Deliverable.sql" />
+    <Build Include="dbo\Tables\Retirement.sql" />
+    <Build Include="dbo\Tables\Retirement_Account_LU.sql" />
+    <Build Include="dbo\Tables\Contracts_Hours.sql" />
+    <Build Include="dbo\Tables\Income.sql" />
+    <Build Include="dbo\Tables\Task_Status_LU.sql" />
+    <Build Include="dbo\Tables\Contractors.sql" />
+    <Build Include="dbo\Tables\Expense_Type_LU.sql" />
+    <Build Include="dbo\Tables\Contracts.sql" />
+    <Build Include="dbo\Stored Procedures\update_Expense_Tax_Year.sql" />
+    <Build Include="dbo\Stored Procedures\TEST_ERROR.sql" />
+    <Build Include="dbo\Stored Procedures\update_Months_Hours.sql" />
+    <Build Include="dbo\Stored Procedures\update_Months_Income.sql" />
+    <Build Include="dbo\Stored Procedures\Report_Contracts_Detail.sql" />
+    <Build Include="dbo\Tables\Estimated_Tax_payments.sql" />
+    <Build Include="dbo\Tables\Quarter_LU.sql" />
+    <Build Include="dbo\Stored Procedures\rpt_ContractCompletion.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="Shaver_Contracts_DB.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Scripts\Post-Deploy\Script.PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\Post-Deploy\Update_Values.sql" />
+    <None Include="Profiles\Contracts_DEV.xml" />
+    <None Include="Shaver_Contracts_DB.publish.xml" />
+    <None Include="Profiles\Shaver_Contracts_DB_PROD.publish.xml" />
+    <None Include="Profiles\Shaver_Contracts_DB_DEV.publish.xml" />
+  </ItemGroup>
+</Project>
